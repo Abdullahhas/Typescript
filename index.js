@@ -20,3 +20,23 @@ UserRoles.ADMIN; //admin
 UserRoles.GUEST; //guest
 UserRoles.AUTHOR; //author
 //any unknown void never null undefined 
+var any; // by default any type .. typescript off ho jati es me jo marzi assign kar do
+any = 1;
+any = 'string';
+var unknown; // by default unknown type .. is me b jo marzi assign kar do but type check karna parta hai kch karne se pehle
+unknown = 1;
+unknown = 'string';
+if (typeof unknown === 'string') {
+    console.log(unknown.toUpperCase());
+} // ye hm any me nahi kar sakte
+//void
+function abcd() {
+    console.log('hello');
+}
+var n; // null
+var un; // undefined
+//never
+function error(message) {
+    throw new Error(message);
+} // ye function kabhi khatam nahi hoga means never return kare ga
+// is ke bad wale code ko b nahi chalne de ga

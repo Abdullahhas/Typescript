@@ -28,3 +28,30 @@ UserRoles.GUEST //guest
 UserRoles.AUTHOR //author
 
 //any unknown void never null undefined 
+let any  // by default any type .. typescript off ho jati es me jo marzi assign kar do
+any = 1;
+any = 'string'; 
+
+let unknown: unknown // by default unknown type .. is me b jo marzi assign kar do but type check karna parta hai kch karne se pehle
+unknown = 1;
+unknown = 'string';
+if(typeof unknown === 'string'){
+    console.log(unknown.toUpperCase());
+} // ye hm any me nahi kar sakte
+ 
+//void
+function abcd () : void {
+    console.log('hello');
+}
+
+ let n : null // null
+
+let un:undefined // undefined
+
+//never
+function error(message: string): never {
+    throw new Error(message);
+} // ye function kabhi khatam nahi hoga means never return kare ga
+// is ke bad wale code ko b nahi chalne de ga
+
+ 
