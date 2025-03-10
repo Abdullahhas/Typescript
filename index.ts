@@ -55,3 +55,57 @@ function error(message: string): never {
 // is ke bad wale code ko b nahi chalne de ga
 
  
+
+// intro to type inferece and type annotation
+
+let inference = 5; // number matlab wo value dekh kar type decide kar leta hai
+let annotation: number; // number matlab ye number type hai jis me hm khud bata de
+
+//intro to type inference and type alias
+
+//interface ka kam he object ke shape batana
+//ap ke object me kia ho ga wo ap interface me batao ge
+
+interface User {
+    name : string,
+    email : string,
+    password : string,
+    gender? : string //agar bata dya to theek ni to error ni aye ga
+}
+
+function getDataOfuser(obj: User)
+{
+    obj.name
+    obj.email
+    obj.password
+}
+ 
+getDataOfuser({name : 'abd',
+    email : "dg",
+    password : "d"
+}) //hme yaha object pass karna hi pare ga
+
+
+
+
+//extended interfaces
+interface U1 {
+    name : string,
+    email :string;
+}
+
+interface Admin extends U1{
+    admin : boolean
+}
+
+
+//two interfaces of same name are actually merged into one
+
+interface A {
+    name : string
+}
+
+interface A{
+    email :string
+}
+

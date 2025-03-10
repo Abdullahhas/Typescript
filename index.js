@@ -40,3 +40,15 @@ function error(message) {
     throw new Error(message);
 } // ye function kabhi khatam nahi hoga means never return kare ga
 // is ke bad wale code ko b nahi chalne de ga
+// intro to type inferece and type annotation
+var inference = 5; // number matlab wo value dekh kar type decide kar leta hai
+var annotation; // number matlab ye number type hai jis me hm khud bata de
+function getDataOfuser(obj) {
+    obj.name;
+    obj.email;
+    obj.password;
+}
+getDataOfuser({ name: 'abd',
+    email: "dg",
+    password: "d"
+}); //hme yaha object pass karna hi pare ga
