@@ -52,3 +52,14 @@ getDataOfuser({ name: 'abd',
     email: "dg",
     password: "d"
 }); //hme yaha object pass karna hi pare ga
+var val = 5;
+function abc(a) {
+}
+// abc(true); // we cant do that
+abc("abc");
+function getAdminDetails(admin) {
+    admin.name;
+    admin.email;
+    admin.getDetails('abc');
+}
+// fundamentals of classes and objects

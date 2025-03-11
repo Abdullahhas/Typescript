@@ -109,3 +109,39 @@ interface A{
     email :string
 }
 
+//type aliases 
+type value = string|number|boolean; //khud ka data type bana sakte hain
+let val : value = 5;
+
+type arg = string | null;
+
+function abc (a: arg){
+
+}
+// abc(true); // we cant do that
+abc("abc");
+
+// intersection types
+
+//union
+type A1 = string | number | boolean;  // | ko union kehte hain
+
+//intersection
+
+type User2 = {
+    name : string,
+    email : string
+}
+
+type Admin2 = User & {
+    getDetails(User : string) : void
+}
+
+function getAdminDetails(admin :  Admin2){
+    admin.name
+    admin.email
+    admin.getDetails('abc')
+}
+
+
+// fundamentals of classes and objects
