@@ -62,4 +62,12 @@ function getAdminDetails(admin) {
     admin.email;
     admin.getDetails('abc');
 }
-// fundamentals of classes and objects
+// fundamentals of classes and objects and constructors
+var BottleMaker = /** @class */ (function () {
+    function BottleMaker(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    return BottleMaker;
+}());
+var b1 = new BottleMaker("b1", 20); //object banaya

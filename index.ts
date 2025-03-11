@@ -144,4 +144,15 @@ function getAdminDetails(admin :  Admin2){
 }
 
 
-// fundamentals of classes and objects
+// fundamentals of classes and objects and constructors
+class BottleMaker {
+    name : string;
+    price : number;
+
+    constructor(name : string, price : number){
+        this.name = name;
+        this.price = price;
+    }
+}
+
+let b1 = new BottleMaker("b1" , 20); //object banaya
