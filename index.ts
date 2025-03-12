@@ -216,4 +216,4 @@ class bot4 {
     }
 
 }
-// b4.name = 'jkk' // this is not allowed because we use readonly but still can compile our code
+// b4.name = 'jkk' // this is not allowed because we use readonly but still can compile our code 
