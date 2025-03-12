@@ -1,3 +1,8 @@
+// important note
+//typescript hamesha hmare code ko compile kare gi even agar error hai to bhi
+
+
+
 //basic and priitibe data types
 let id: number = 5;
 let company: string = 'Traversy Media';
@@ -156,3 +161,59 @@ class BottleMaker {
 }
 
 let b1 = new BottleMaker("b1" , 20); //object banaya
+
+
+//Access modifiers 
+//public 
+
+class bot {
+    constructor(public name : string )
+    {
+
+    }
+
+}
+
+let b2 = new bot('b2');
+b2.name = "bbbb" // this is allowed because we use public
+
+//private
+class bot1 {
+    constructor(private name : string )
+    {
+
+    }
+
+}
+let b3 = new bot1('b3');
+// b3.name = 'jkk' // this is not allowed because we use private but still can compile our code
+
+// when we make private and then inherit that class then it will not be accessible in child class
+
+//protected means we can access in child class but not in object
+class bot2 {
+    constructor(protected name : string )
+    {
+
+    }
+
+}
+
+class bot3 extends bot2 {
+    constructor(name : string){  // we cab change here
+        super(name)
+    }
+}
+
+let b4 = new bot3('b4');
+// b4.name = 'jkk' // this is not allowed because we use protected but still can compile our code
+
+// if we dont want to change the value of a property then we use readonly
+class bot4 {
+    constructor(readonly name : string )
+    {
+
+    }
+
+}
+// b4.name = 'jkk' // this is not allowed because we use readonly but still can compile our code

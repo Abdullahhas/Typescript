@@ -1,3 +1,20 @@
+// important note
+//typescript hamesha hmare code ko compile kare gi even agar error hai to bhi
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //basic and priitibe data types
 var id = 5;
 var company = 'Traversy Media';
@@ -71,3 +88,47 @@ var BottleMaker = /** @class */ (function () {
     return BottleMaker;
 }());
 var b1 = new BottleMaker("b1", 20); //object banaya
+//Access modifiers 
+//public 
+var bot = /** @class */ (function () {
+    function bot(name) {
+        this.name = name;
+    }
+    return bot;
+}());
+var b2 = new bot('b2');
+b2.name = "bbbb"; // this is allowed because we use public
+//private
+var bot1 = /** @class */ (function () {
+    function bot1(name) {
+        this.name = name;
+    }
+    return bot1;
+}());
+var b3 = new bot1('b3');
+// b3.name = 'jkk' // this is not allowed because we use private but still can compile our code
+// when we make private and then inherit that class then it will not be accessible in child class
+//protected means we can access in child class but not in object
+var bot2 = /** @class */ (function () {
+    function bot2(name) {
+        this.name = name;
+    }
+    return bot2;
+}());
+var bot3 = /** @class */ (function (_super) {
+    __extends(bot3, _super);
+    function bot3(name) {
+        return _super.call(this, name) || this;
+    }
+    return bot3;
+}(bot2));
+var b4 = new bot3('b4');
+// b4.name = 'jkk' // this is not allowed because we use protected but still can compile our code
+// if we dont want to change the value of a property then we use readonly
+var bot4 = /** @class */ (function () {
+    function bot4(name) {
+        this.name = name;
+    }
+    return bot4;
+}());
+// b4.name = 'jkk' // this is not allowed because we use readonly but still can compile our code
