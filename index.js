@@ -153,3 +153,31 @@ var bot5 = /** @class */ (function () {
 var b5 = new bot5('b5');
 b5.name = 'b6';
 console.log(b5.name);
+//static members
+//static values ap bna  object bnae use kar sakte hain 
+var Hero = /** @class */ (function () {
+    function Hero() {
+    }
+    Hero.version = 1.1;
+    return Hero;
+}());
+console.log(Hero.version); // can be possible even without made object because we make static
+//Abstract classes
+//abstract classes are those classes which can't be instantiated
+var Hero1 = /** @class */ (function () {
+    function Hero1() {
+    }
+    return Hero1;
+}());
+var Hero2 = /** @class */ (function (_super) {
+    __extends(Hero2, _super);
+    function Hero2() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = 'abd';
+        return _this;
+    }
+    Hero2.prototype.getDetails = function () {
+        return this.name;
+    };
+    return Hero2;
+}(Hero1));

@@ -240,3 +240,39 @@ class bot5 {
 let b5 = new bot5('b5');
 b5.name = 'b6';
 console.log(b5.name);
+
+//static members
+
+//static values ap bna  object bnae use kar sakte hain 
+
+class Hero{
+    static version = 1.1
+}
+
+console.log(Hero.version); // can be possible even without made object because we make static
+
+//Abstract classes
+//abstract classes are those classes which can't be instantiated
+abstract class Hero1{
+    abstract name : string;
+    abstract getDetails() : string;
+}
+
+
+class Hero2 extends Hero1{
+    name = 'abd';
+    getDetails(){
+        return this.name;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
