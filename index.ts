@@ -217,3 +217,26 @@ class bot4 {
 
 }
 // b4.name = 'jkk' // this is not allowed because we use readonly but still can compile our code 
+
+// ? means optional
+
+
+//getters and setters
+class bot5 {
+    constructor(private _name : string )  //_ is lie lagaya he kio ke ye property getter setter me use ho gi  
+    {
+
+    }
+
+    get name(){
+        return this._name;
+    }
+
+    set name(value : string){
+        this._name = value;
+    }
+}
+
+let b5 = new bot5('b5');
+b5.name = 'b6';
+console.log(b5.name);

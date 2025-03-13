@@ -132,3 +132,24 @@ var bot4 = /** @class */ (function () {
     return bot4;
 }());
 // b4.name = 'jkk' // this is not allowed because we use readonly but still can compile our code 
+// ? means optional
+//getters and setters
+var bot5 = /** @class */ (function () {
+    function bot5(_name) {
+        this._name = _name;
+    }
+    Object.defineProperty(bot5.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return bot5;
+}());
+var b5 = new bot5('b5');
+b5.name = 'b6';
+console.log(b5.name);
