@@ -181,3 +181,14 @@ var Hero2 = /** @class */ (function (_super) {
     };
     return Hero2;
 }(Hero1));
+//functions
+function add(a, b) {
+    return a + b;
+}
+//function type
+function abcdd(name, cb) {
+    cb("ali");
+}
+abcdd('abd', function (name) {
+    console.log(name);
+});

@@ -266,6 +266,19 @@ class Hero2 extends Hero1{
     }
 }
 
+//functions
+function add(a : number , b : number) : number {
+    return a+b;
+}
+
+//function type
+function abcdd(name : string , cb : (name : string) => void){
+    cb("ali");
+}
+
+abcdd('abd' , (name) => {
+    console.log(name);
+})
 
 
 
