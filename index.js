@@ -236,3 +236,10 @@ var b11 = new Bottle("dg");
 var b12 = new Bottle(3);
 //or
 // let b12 = new Bottle<number>(3)
+//Modules
+//type assertions
+// let assert : any = 12
+// (assert as number)
+//not null
+// a! means a is not null or undefined
+//type gaurds means typeof ka use karna
