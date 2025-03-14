@@ -218,3 +218,21 @@ function addd(a, b) {
 //add(1,2);
 //add('a','b');
 //generics
+function identity(arg) {
+}
+identity('abc');
+identity(1);
+identity(true);
+function anmd(obj) { }
+anmd({ name: "abd", age: 2, key: "123" });
+//generic classes
+var Bottle = /** @class */ (function () {
+    function Bottle(key) {
+        this.key = key;
+    }
+    return Bottle;
+}());
+var b11 = new Bottle("dg");
+var b12 = new Bottle(3);
+//or
+// let b12 = new Bottle<number>(3)

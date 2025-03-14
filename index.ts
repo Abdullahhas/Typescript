@@ -303,6 +303,41 @@ function addd(a : any , b : any) : any{
 //add('a','b');
 
 //generics
+function identity<T>(arg : T) {
+    
+}
+
+identity<string>('abc');
+identity<number>(1);
+identity<boolean>(true);
+
+//generic interface
+interface Halua <T>{
+    name : string, 
+    age : number,
+    key : T
+}
+
+function anmd(obj : Halua<string>)
+{}
+
+anmd({name : "abd" , age : 2 , key : "123"})
+
+//generic classes
+
+class Bottle <T> {
+    constructor(public key : T)
+    {}
+}
+
+let b11 = new Bottle("dg")
+let b12 = new Bottle(3) 
+//or
+// let b12 = new Bottle<number>(3)
+
+
+
+
 
 
 
