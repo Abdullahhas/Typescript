@@ -15,6 +15,15 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 //basic and priitibe data types
 var id = 5;
 var company = 'Traversy Media';
@@ -192,3 +201,20 @@ function abcdd(name, cb) {
 abcdd('abd', function (name) {
     console.log(name);
 });
+//Rest parameters
+function args() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+}
+args(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
+//spread
+var arr1 = [1, 2, 3, 4, 5];
+var arr2 = __spreadArray([], arr1, true);
+function addd(a, b) {
+    return a + b;
+}
+//add(1,2);
+//add('a','b');
+//generics

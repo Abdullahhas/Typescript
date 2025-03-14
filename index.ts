@@ -280,6 +280,31 @@ abcdd('abd' , (name) => {
     console.log(name);
 })
 
+//Rest parameters
+function args(...args: number[])
+{
+
+}
+
+args(1,2,3,4,5,6,7,8,9,0); 
+
+//spread
+let arr1 = [1,2,3,4,5];
+let arr2 = [...arr1];
+
+//function overloading
+function addd(a : number , b : number) : number;
+function addd(a : string , b : string) : string;
+function addd(a : any , b : any) : any{
+    return a+b;
+}
+
+//add(1,2);
+//add('a','b');
+
+//generics
+
+
 
 
 
